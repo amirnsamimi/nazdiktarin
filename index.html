@@ -13,7 +13,7 @@
     <title>نزدیکترین</title>
     <script src="./app.js" defer></script>
   </head>
-  <body onload="init()">
+  <body >
     <header>
       <img src="./assets/image.svg" alt="logo" />
       <h1>نزدیکترین</h1>
@@ -34,6 +34,7 @@
               <datalist id="destination-input"> </datalist>
               <img src="./assets/Arrows.svg" alt="destination" />
             <input
+            value="تجریش"
               list="destination-input"
               name="destination"
               placeholder="تجریش"
@@ -43,15 +44,15 @@
           <label >
             <datalist id="depurture-input"> </datalist>
             <img src="./assets/Buildings.svg" alt="depurture" />
-            <input list="depurture-input" name="depurture" placeholder="کهریزک" />
+            <input value="پانزده خرداد" list="depurture-input" name="depurture" placeholder="کهریزک" />
          
           </label>
-          <label > <img src="./assets/Map.svg" alt="map" /><select name="destination" id="destination-input"></select>   </label>
-          <div id="coordinators"></div>
+          <label > <img src="./assets/Map.svg" alt="map" /><select name="coordinations" id="coordinations"></select>   </label>
+          <div id="coordinations"></div>
 
           
         </form>
-        <button>جستجو</button>
+        <button onclick="checkroutes()">جستجو</button>
       </section>
     </main>
     <footer>
