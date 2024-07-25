@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Vazirmatn:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>نزدیکترین</title>
+    <script src="./app.js" defer></script>
+  </head>
+  <body onload="init()">
+    <header>
+      <img src="./assets/image.svg" alt="logo" />
+      <h1>نزدیکترین</h1>
+    </header>
+    <main>
+      <section class="hero">
+        <h2>نزدیکترین ایستگاه مترو</h2>
+        <p>
+          سامانه یافتن نزدیکترین ایستگاه مترو و نزدیکترین زمان حرکت به شما با
+          محاسبه فاصله شما از ایستگاه و زمان حدودی رسیدن شما در صورت راه رفتن تا
+          آن ایستگاه.
+        </p>
+      </section>
+      <section class="card">
+        <img src="./assets/train.svg" alt="" />
+        <form>
+          <label >
+              <datalist id="destination-input"> </datalist>
+              <img src="./assets/Arrows.svg" alt="destination" />
+            <input
+              list="destination-input"
+              name="destination"
+              placeholder="تجریش"
+            />
+       
+          </label>
+          <label >
+            <datalist id="depurture-input"> </datalist>
+            <img src="./assets/Buildings.svg" alt="depurture" />
+            <input list="depurture-input" name="depurture" placeholder="کهریزک" />
+         
+          </label>
+          <label > <img src="./assets/Map.svg" alt="map" /><select name="destination" id="destination-input"></select>   </label>
+          <div id="coordinators"></div>
+
+          
+        </form>
+        <button>جستجو</button>
+      </section>
+    </main>
+    <footer>
+        امیر صمیمی - فناوران نوآوران فرداد راشین - 1403
+    </footer>
+  </body>
+</html>
