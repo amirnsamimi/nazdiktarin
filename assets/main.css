@@ -67,6 +67,10 @@ select, input{
     
 }
 
+option{
+    color:black;
+}
+
 button{
     color: #073464;
     background-color: #FFC700;
@@ -102,7 +106,7 @@ label img{
 }
 
 ::placeholder{
-    color:whitesmoke
+    color:lightslategrey
 }
 
 
@@ -122,4 +126,45 @@ footer{
     color: white;
     font-size: 0.75rem;
     font-weight: 200;
+}
+
+#stations{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.result{
+    display: none;
+    background-color: #073464;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    max-width: 400px;
+    width: 100%;
+
+
+}
+
+.res-container{
+    display: flex;
+    justify-content: center;
+}
+
+#arrival-time,#approx-time{
+    color:#FFC700;
+
+}
+
+#stations{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: black;
+    margin-top: 1rem;
+    overflow-x:scroll ;
+
+}
+
+::-webkit-scrollbar{
+    display: none;
 }

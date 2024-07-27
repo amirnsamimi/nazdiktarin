@@ -13,7 +13,7 @@
     <title>نزدیکترین</title>
     <script src="./app.js" defer></script>
   </head>
-  <body >
+  <body onload="init()">
     <header>
       <img src="./assets/image.svg" alt="logo" />
       <h1>نزدیکترین</h1>
@@ -26,37 +26,48 @@
           محاسبه فاصله شما از ایستگاه و زمان حدودی رسیدن شما در صورت راه رفتن تا
           آن ایستگاه.
         </p>
+        <div class="res-container">
+        <div class="result">
+          <div class="info">
+            نزدیکترین ساعت رسیدن مترو
+            <div id="arrival-time"></div>
+          </div>
+          <div class="info">
+            مدت زمان سفر ( دقیقه )
+            <div id="approx-time"></div>
+          </div>
+          <div id="stations"></div>
+        </div>
+      </div>
       </section>
       <section class="card">
         <img src="./assets/train.svg" alt="" />
         <form>
-          <label >
-              <datalist id="destination-input"> </datalist>
-              <img src="./assets/Arrows.svg" alt="destination" />
-            <input
-            value="تجریش"
-              list="destination-input"
-              name="destination"
-              placeholder="تجریش"
-            />
-       
+          <label>
+            <img src="./assets/Arrows.svg" alt="depurture" />
+            <select name="depurture" id="depurture-input">
+              <option disabled selected>حرکت</option>
+            </select>
           </label>
-          <label >
-            <datalist id="depurture-input"> </datalist>
-            <img src="./assets/Buildings.svg" alt="depurture" />
-            <input value="پانزده خرداد" list="depurture-input" name="depurture" placeholder="کهریزک" />
-         
+          <label>
+            <img src="./assets/Buildings.svg" alt="destination" />
+            <select name="destination" id="destination-input">
+              <option disabled selected>مقصد</option>
+            </select>
           </label>
-          <label > <img src="./assets/Map.svg" alt="map" /><select name="coordinations" id="coordinations"></select>   </label>
+          <label>
+            <img src="./assets/Map.svg" alt="map" /><select
+              name="coordinations"
+              id="coordinations"
+            >
+              <option disabled selected>به زودی</option>
+            </select>
+          </label>
           <div id="coordinations"></div>
-
-          
         </form>
         <button onclick="checkroutes()">جستجو</button>
       </section>
     </main>
-    <footer>
-        امیر صمیمی - فناوران نوآوران فرداد راشین - 1403
-    </footer>
+    <footer>امیر صمیمی - فناوران نوآوران فرداد راشین - 1403</footer>
   </body>
 </html>
