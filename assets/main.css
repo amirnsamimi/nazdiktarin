@@ -5,7 +5,12 @@
     padding: 0;
 }
 
-
+body{
+    min-height: 100vh;
+   display: flex; 
+   flex-direction: column;
+   justify-content: space-between;
+}
 header{
     display: flex;
     align-items: center;
