@@ -66,18 +66,19 @@ const  trainTimeSheet = [
 
 const init = () => {
 
-    trainTimeSheet.map(i=>{
+    const elementCreator = (id) => {
+        //get id and station
+    }
+    trainTimeSheet.forEach(i=>{
         const el = document.createElement('option')
+        const el1 = document.createElement('option')
         el.innerText = i.station
+        el1.innerText = i.station
         document.getElementById("depurture-input").appendChild(el)
+        document.getElementById("destination-input").appendChild(el1)
 
     })
-    trainTimeSheet.map(i=>{
-        const el = document.createElement('option')
-        el.innerText = i.station
-        document.getElementById("destination-input").appendChild(el)
 
-    })
 }   
 
 let destList = [...trainTimeSheet]
@@ -107,18 +108,13 @@ const checkroutes = () => {
         const gap = document.createElement('hr')
         el.innerText =  i.station 
         if(index === 0 ){
-      
             document.getElementById('stations').appendChild(el)
             document.getElementById('stations').appendChild(gap)
-            
         }else if( index === destList.length-1){
-          
             document.getElementById('stations').appendChild(el)
-            
         }else{
             document.getElementById('stations').appendChild(el)
             document.getElementById('stations').appendChild(gap)
-               
         }
 
     })
